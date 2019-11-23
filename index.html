@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
     <title>Sezairi</title>
 </head>
 
@@ -29,7 +29,36 @@
         </nav>
     </header>
 
-    <main>Hallo 😁🖐</main>
+    <main>
+        <section class="contact">
+            <div></div>
+            <form action="./contact" method="POST">
+                <div class="inputs">
+                    <div class="name-input">
+                        <label class="label-input">
+                            <span class="label-text">Name</span>
+                            <input type="text" name="name" required>
+                        </label>
+                    </div>
+                    <div class="email">
+                        <label class="label-input">
+                            <span class="label-text">Email</span>
+                            <input type="email" name="email" required>
+                        </label>
+                    </div>
+                    <div class="textarea">
+                        <label class="label-input">
+                            <span class="label-text">Nachricht</span>
+                            <textarea name="text" id="input-message"  required></textarea>
+                        </label>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Senden</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <script>
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
