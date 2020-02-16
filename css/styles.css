@@ -310,8 +310,11 @@ summary {
 /* End normalize */
 
 :root {
-    --bg-color: #101113;
+   /*  --bg-color: #101113; */
+   --bg-color: #121212;
     --font-color: #ffffff;
+    --font-secondary: rgba(255, 255, 255,.6);
+    --font-heading: #90CAF9;
     /* 	--foreground-color: #ffffff;
 	--accent-color: #ff5252; */
 }
@@ -319,19 +322,24 @@ summary {
 [data-theme="light"] {
     --bg-color: #ffffff;
     --font-color: #101113;
+    --font-secondary: rgba(0, 0, 0,.6);
+    --font-heading: #2196F3;
 }
 
 body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--bg-color);
+    padding: 0 1em;
 }
+
 
 main {
     color: var(--font-color);
   
     margin: 20px auto 20px auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif; */
 }
 
 nav {
@@ -339,13 +347,22 @@ nav {
     justify-content: space-between;
     color: var(--font-color);
     font-size: 26px;
-    padding: 30px 20px;
+    padding: 30px 0px;
 }
 
 .name {
     text-transform: uppercase;
 }
 
+.contact-link{
+    margin: 10px ;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--font-heading);
+    font-family:  Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid var(--font-heading); 
+}
 .mode-toggle input {
     opacity: 0;
     height: 0;
@@ -449,6 +466,68 @@ textarea  {
     border: 1px solid #ced4da;
     user-select: none;
 }
+
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 150px 0;
+}
+.section-heading{
+    margin: 10px 0 40px;
+    font-size: 2rem;
+
+}
+
+.description{
+    padding: 100px 0 150px 0;
+}
+.description .name {
+    font-size: 3.5rem;
+}
+.short-desc{
+    font-size: 3rem;
+    color: var(--font-secondary)
+}
+
+.description .desc{
+    margin: 40px 0;
+    font-family:  Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+hr{
+    margin-bottom: 3rem;
+    border-width: 0;
+    border-top: 2px solid var(--font-color);
+    width: 40px;
+    text-align: left;
+    margin-left: 0;
+}
+.about .desc{
+    max-width: 480px;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family:  Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .text-gradient{
+    background: linear-gradient(45deg, #64B5F6 30%, #E3F2FD 90%);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.text-gradient{
+    color: var(--font-heading);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin: 0px 0px 10px;
+}
+
 .submit {
     text-align: center;
 }
@@ -458,7 +537,7 @@ textarea  {
     border: 1px solid transparent;
     border-radius: 25px;
     cursor: pointer;
-    background-color: var(--green);
+    background: linear-gradient(45deg, rgb(33, 150, 243) 30%, rgb(33, 203, 243) 90%);
     color: white;
 }
 
@@ -477,11 +556,4 @@ textarea:focus {
     border-color: #80bdff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
-}
-
-@media (max-width: 1024px){
-    body {
-        padding: 0 1em;
-    }
-
 }
