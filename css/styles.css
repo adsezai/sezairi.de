@@ -555,12 +555,37 @@ textarea:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
-.work-entry {
+.work-content {
   display: flex;
 }
 
 .work-left {
   flex: 0 0 250px;
+}
+
+.work-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+.work-time {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.work-left,
+.work-desc {
+  padding-bottom: 20px;
+}
+
+.work-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.work-line {
+  /* border-left: 1px solid gray; */
 }
 
 @media (max-width: 600px) {
@@ -578,5 +603,12 @@ textarea:focus {
     max-width: 250px;
     margin-left: 0px;
     align-self: center;
+  }
+
+  .work-content {
+    flex-direction: column;
+  }
+  .work-left {
+    flex: 0 0 auto;
   }
 }
