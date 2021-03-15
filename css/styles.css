@@ -283,12 +283,13 @@ summary {
 :root {
   /*  --bg-color: #101113; */
   --bg-color: #121212;
-  --font-color: #ffffff;
+  --font-color: rgba(255,255,255,0.87) ;
   --font-secondary: rgba(255, 255, 255, 0.6);
   --font-heading: #90caf9;
   /* 	--foreground-color: #ffffff;
   --accent-color: #ff5252; */
 
+  --card-background: rgba(25, 118, 210, 0.03);
   --work-sideline: #42526d;
 }
 
@@ -297,6 +298,8 @@ summary {
   --font-color: #101113;
   --font-secondary: rgba(0, 0, 0, 0.6);
   --font-heading: #1976d2;
+
+  --card-background: rgba(25, 118, 210, 0.06);
   --work-sideline: #d0d6df;
 }
 
@@ -608,6 +611,47 @@ textarea:focus {
   padding-left: 20px;
   margin-bottom: 20px;
   line-height: 1.6;
+}
+.project-entry-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.project{
+  padding: 20px 15px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  
+  border: 1px solid var(--work-sideline);
+  background-color: var(--card-background); 
+}
+
+.project-title{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  
+}
+
+.project-description{
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.project-tech{
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: monospace;
+  line-height: 2;
+}
+
+.project-links{
+  display: flex;
+  justify-content: flex-start;
+}
+.project-link-github svg{
+  width: 26px;
+  height: 26px;
+  fill: var(--font-color);
 }
 
 @media (max-width: 600px) {
