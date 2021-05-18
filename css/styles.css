@@ -309,6 +309,7 @@ body {
   background-color: var(--bg-color);
   padding: 0 1em;
 
+  transition: 0.6s ease;
   -webkit-transition: 0.6s ease;
   -moz-transition: 0.6s ease;
   -ms-transition: 0.6s ease;
@@ -462,6 +463,10 @@ textarea {
 
 .section-content {
   display: flex;
+}
+
+img {
+  pointer-events: none;
 }
 
 .about-image {
